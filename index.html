@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <h1 class="splitterHeading">SPLI<br>TTER</h1>
+    <div class="main">
+      <div class="container">
+        <div class="leftSide">
+          <div class="bill colFlex">
+            <h3 class="leftHeading">Bill</h3>
+            <div class="billInputBox rowFlex">
+              <img class="dollar" src="images/icon-dollar.svg" alt="" />
+              <input type="number" onchange={getBAmt(value)} placeholder="0" class="billInput box" />
+            </div>
+          </div>
+          <div class="tipSelection colFlex">
+            <h3 class="leftHeading">Select Tip %</h3>
+            <div class="tips">
+            
+              <input type="number" class="customTip" onclick={clrchange()} onchange={defaultclr(value)} placeholder="Custom" />
+            </div>
+          </div>
+          <div class="peopleCount colFlex">
+            <h3 class="leftHeading">Number of People</h3>
+            <div class="peopleCountInputBox rowFlex">
+              <img class="people" src="images/icon-person.svg" alt="" />
+              <input type="number" placeholder="0" onchange={getPAmt(value)} class="peopleCountInput box" />
+            </div>
+          </div>
+        </div>
+        <div class="rightSide">
+          <div class="rightOutput">
+            <div class="result">
+              <div class="sidebar">
+                <div>
+                  <h3 class="rightHeading">Tip Amount</h3>
+                  <h5 class="caption">/person</h5>
+                </div>
+                <h1 class="tipAmount resultOutput">$0.00</h1>
+              </div>
+            </div>
+            <div class="result">
+              <div class="sidebar">
+                <div>
+                  <h3 class="rightHeading">Total</h3>
+                  <h5 class="caption">/person</h5>
+                </div>
+                <h1 class="totalAmount resultOutput">$0.00</h1>
+              </div>
+            </div>
+          </div>
+          <button class="resetBtn"  >RESET</button>
+        </div>
+      
+      </div>
+    </div>
+
+    <div class="attribution">
+      <div class="footer">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/sarthak783891">Sarthak Gupta</a>.
+      </div>
+    </div>
+  </body>
+  <script  src="index.js"></script>
+</html>
